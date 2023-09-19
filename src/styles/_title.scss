@@ -1,0 +1,58 @@
+@use 'variaveis';
+
+.title__menu {
+
+    &__content {
+
+        &__img {
+            width: 100%;
+        }
+    }
+}
+
+.sinopse__menu {
+    margin-top: -150px;
+    margin-bottom: 20px;
+    width: 600px;
+
+    @media (max-width: 768px) {
+        width: 100%;
+        margin-top: -120px;
+    }
+
+
+    h4 {
+        display: flex;
+        align-items: center;
+        margin: 5px 0;
+
+        p {
+            margin-left: 5px;
+        }
+    }
+
+    img{
+        width: 32px;
+    }
+
+    .button-flex {
+        margin-top: 20px;
+        display: flex;
+
+        button {
+            margin-right: 5px;
+            display: flex;
+            width: 250px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: rgba(variaveis.$corDeFundoBotaoDark, 0.8);
+                border-color: variaveis.$corTextoSecundario;
+            }
+
+            img {
+                margin-right: 10px;
+            }
+        }
+    }
+}

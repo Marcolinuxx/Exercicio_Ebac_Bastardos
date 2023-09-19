@@ -1,0 +1,92 @@
+@use 'variaveis';
+
+.shows {
+    margin-top: 25px;
+    padding: 2vw 5.6vw;
+    min-height: 50vw;
+
+    &__list {
+        display: none;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 24px;
+        margin-top: 44px;
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        &--is-active {
+            display: grid;
+        }
+        
+        &__item {
+
+            img {
+                max-width: 100%;
+                border-radius: 4px;
+            }
+        }
+
+        .details__container {
+            color: variaveis.$corTextoSecundario;
+            padding: 16px;
+            margin-bottom: 24px;
+
+            &__about {
+                margin: 20px 0;
+            }
+
+            &__casting-production {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 24px;
+                margin: 10px 0;
+            }
+        }
+    }
+
+    &__tabs {
+        display: flex;
+        justify-content: center;
+
+        @media (max-width: 768px) {
+            white-space: nowrap;
+        }
+
+        &__button {
+            color: variaveis.$corTextoSecundario;
+            font-size: 20px;
+            border: none;
+            padding-bottom: 5px;
+            background: none;
+            text-transform: uppercase;
+            margin: 0 1vw;
+            cursor:pointer;
+            border-bottom: 5px solid transparent;
+
+            &--is-active {
+                border-color: variaveis.$corTextoSecundario;
+            }
+
+            @media (max-width: 768px) {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+.shows__list__item-sugestao {
+    position: relative; 
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.shows__list__item-sugestao img {
+    cursor: pointer;
+    max-width: 100%;
+    border-radius: 4px;
+}
+
+.shows__list__item-sugestao:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
