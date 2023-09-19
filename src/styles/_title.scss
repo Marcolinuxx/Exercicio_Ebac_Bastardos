@@ -5,7 +5,11 @@
     &__content {
 
         &__img {
-            width: 100%;
+            width: 600px;
+            
+            @media (max-width: 768px) {
+                width: 100%;
+            }
         }
     }
 }
